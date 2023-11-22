@@ -87,16 +87,24 @@ exrLoader.load(
 /**
  * Models
  */
+const wireframeMaterial = new THREE.MeshStandardMaterial({
+  // wireframe: true,
+  color: "#dddddd",
+});
 gltfLoader.load(
-  "/models/gondola_paint.glb",
+  // "/models/gondola_wireframe.glb",
+  "/models/gondola_lowPoly.glb",
   // "/models/gondola_glass.glb",
   // "/models/gondola_wood.glb",
   (gltf) => {
-    // gltf.scene.scale.set(1, 1, 1);
+    // gltf.scene.scale.set(0.1, 0.1, 0.1);
     // gltf.scene.position.z = 8;
-    // for (const child of gltf.scene.children) {
-    //   console.log(child);
-    // }
+    gltf.scene.traverse((obj) => {
+      if (obj.isMesh) {
+        // console.log(obj.material);
+        obj.material = wireframeMaterial;
+      }
+    });
     scene.add(gltf.scene);
     updateAllMaterials();
   }
