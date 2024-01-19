@@ -1,0 +1,157 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  grid-template-rows: 10vh auto;
+  align-items: end;
+  justify-items: center;
+}
+
+.toggleContainer {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  position: relative;
+  width: 20vw;
+  height: 6vh;
+  background-color: #c4c6c7;
+  border-radius: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 16px;
+  min-width: 250px;
+  box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.toggleContainer input {
+  display: none;
+}
+.toggleContainer label {
+  z-index: 100;
+  cursor: pointer;
+}
+.toggle {
+  position: absolute;
+  width: 48%;
+  height: 80%;
+  left: 1.5%;
+  top: 10%;
+  background-color: #fff;
+  border-radius: 50vw;
+  transition: all 0.7s;
+  z-index: 4;
+  box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+#threejs {
+}
+
+#keyshot:checked ~ .toggle {
+  left: 50.5%;
+}
+
+label {
+  text-align: center;
+  color: #415166;
+  position: relative;
+}
+
+input:disabled + label {
+  color: rgb(65, 81, 102, 0.3);
+}
+
+label img {
+  height: 18px;
+  margin: 0 5px;
+  vertical-align: top;
+}
+
+label:hover {
+  color: #202833;
+}
+
+label:hover > .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+input:checked + label {
+  color: #0769e0;
+}
+
+.tooltip {
+  position: absolute;
+  top: 5vh;
+  left: -5%;
+  /* right: 0; */
+  visibility: hidden;
+  opacity: 0;
+  font-size: 12px;
+  width: 120%;
+  background-color: #555;
+  color: #fff;
+  text-align: justify;
+  overflow-wrap: break-word;
+  padding: 1vw;
+  border-radius: 1vw;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.fullscreenContainer {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  margin-bottom: 1vh;
+}
+
+.githubLinkContainer {
+  justify-self: left;
+  grid-row: 1/2;
+  grid-column: 4/5;
+  margin-bottom: 1vh;
+}
+
+.projectIntroContainer {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  margin-bottom: 1vh;
+}
+
+@media (max-aspect-ratio: 1) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 8vh 6vh auto;
+    align-items: center;
+  }
+
+  .toggleContainer {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+
+  .fullscreenContainer {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .githubLinkContainer {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    justify-self: center;
+  }
+
+  .projectIntroContainer {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}

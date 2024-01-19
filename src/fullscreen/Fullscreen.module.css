@@ -1,0 +1,11 @@
+.fullscreenButton {
+  z-index: 1;
+  color: #415166;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+}
+
+.fullscreenButton:hover {
+  border-bottom: 2.5px solid #0769e0;
+}

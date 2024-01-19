@@ -9,6 +9,7 @@ import {
 const WindowContext = createContext({
   clientHeight: document.documentElement.clientHeight,
   clientWidth: document.documentElement.clientWidth,
+  isFullscreen: Boolean(document.fullscreenElement),
 });
 
 function WindowContextProvider({ children }) {
@@ -21,6 +22,7 @@ function WindowContextProvider({ children }) {
 
   const [clientHeight, setVh] = useState(getVh());
   const [clientWidth, setVw] = useState(getVw());
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,8 +35,19 @@ function WindowContextProvider({ children }) {
     };
   }, [getVh, getVw]);
 
+  useEffect(() => {
+    function onFullscreenChange() {
+      setIsFullscreen(Boolean(document.fullscreenElement));
+    }
+
+    document.addEventListener("fullscreenchange", onFullscreenChange);
+
+    return () =>
+      document.removeEventListener("fullscreenchange", onFullscreenChange);
+  }, []);
+
   return (
-    <WindowContext.Provider value={{ clientHeight, clientWidth }}>
+    <WindowContext.Provider value={{ clientHeight, clientWidth, isFullscreen }}>
       {children}
     </WindowContext.Provider>
   );

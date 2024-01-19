@@ -1,0 +1,53 @@
+.button {
+  color: #415166;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+}
+
+.buttonActive {
+  border-bottom: 2.5px solid #0769e0;
+}
+
+.intro {
+  position: absolute;
+  z-index: 5;
+  left: 20%;
+  right: 20%;
+  top: 15%;
+  font-size: 14px;
+  /* word-break: break-all; */
+  overflow-wrap: break-word;
+  visibility: hidden;
+  background-color: rgba(85, 85, 85, 0.75);
+  color: #fff;
+  padding: 1%;
+  border-radius: 5px;
+  text-align: justify;
+}
+
+@media (max-aspect-ratio: 1) {
+  .intro {
+    left: 10%;
+    right: 10%;
+  }
+}
+
+.introActive {
+  visibility: visible;
+}
+
+.intro button {
+  display: block;
+  margin: 0 auto 2% 93%;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 1%;
+}
+
+.intro button:hover {
+  color: rgba(85, 85, 85, 0.75);
+  background-color: #fff;
+}
