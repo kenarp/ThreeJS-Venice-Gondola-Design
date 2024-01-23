@@ -44,7 +44,7 @@ export default KeyshotXRcomp;
 
 function initKeyShotXR(viewPortWidth = 3840, viewPortHeight = 2400) {
   var nameOfDiv = "KeyShotXR";
-  var folderName = "gondola.0";
+  var folderName = "/gondola.0";
   // var viewPortWidth = 3840;
   // var viewPortHeight = 2400;
   var backgroundColor = "#FFFFFF";
@@ -64,7 +64,7 @@ function initKeyShotXR(viewPortWidth = 3840, viewPortHeight = 2400) {
   var downloadOnInteraction = false;
   var imageExtension = "png";
   var showLoading = true;
-  var loadingIcon = "ks_logo.png"; // Set to empty string for default icon.
+  var loadingIcon = "/ks_logo.png"; // Set to empty string for default icon.
   var allowFullscreen = true; // Double-click in desktop browsers for fullscreen.
   var uReverse = false;
   var vReverse = false;

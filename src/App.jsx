@@ -39,7 +39,7 @@ function App() {
           onChange={() => setRenderMode("threeJS")}
         />
         <label className={styles.rendererLabel} htmlFor={styles.threejs}>
-          <img src="threeJS.svg" alt="threeJS logo" />
+          <img src="/threeJS.svg" alt="threeJS logo" />
           ThreeJS
           <span className={styles.tooltip}>
             {supportWebGL
@@ -56,7 +56,7 @@ function App() {
           onChange={() => setRenderMode("keyshotXR")}
         />
         <label className={styles.rendererLabel} htmlFor={styles.keyshot}>
-          <img src="KeyShot_Icon_RGB.svg" alt="threeJS logo" />
+          <img src="/KeyShot_Icon_RGB.svg" alt="threeJS logo" />
           Keyshot XR
           <span className={styles.tooltip}>
             Fallback solution when WebGL is not supported
