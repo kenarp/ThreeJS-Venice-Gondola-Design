@@ -9,9 +9,7 @@ function ProjectIntro({ children }) {
     <>
       <button
         className={
-          isHover || isClicked
-            ? `${styles.button} ${styles.buttonActive}`
-            : styles.button
+          isClicked ? `${styles.button} ${styles.buttonActive}` : styles.button
         }
         onMouseOver={() => {
           setIsHover(true);

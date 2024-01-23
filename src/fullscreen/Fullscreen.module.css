@@ -8,4 +8,5 @@
 
 .fullscreenButton:hover {
   border-bottom: 2.5px solid #0769e0;
+  cursor: pointer;
 }
