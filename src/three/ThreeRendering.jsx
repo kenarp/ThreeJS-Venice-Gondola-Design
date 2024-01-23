@@ -268,7 +268,7 @@ function ThreeRendering() {
         <Fullscreen onRequestFullscreen={requestFullscreen}></Fullscreen>
       </div>
       <div className={styles.three}>
-        {isLoading && <div className={styles.loader}>Is Loading...</div>}
+        {isLoading && <div className={styles.loader}>Loading...</div>}
         <div className={styles.threeContainer} ref={rendererCanvas}></div>
       </div>
     </>

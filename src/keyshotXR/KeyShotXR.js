@@ -114,9 +114,9 @@ export default function keyshotXRConstructor(
         (l.style.width = "100%"),
         (l.style[N] = "scale(" + c.n + ")"),
         (l.style.height = "auto"),
-        (s.style["background-color"] = a.backgroundColor),
-        (document.body.style["background-color"] = a.backgroundColor))
-      : (l.setAttribute("height", B.height),
+        (s.style["background-color"] = a.backgroundColor))
+      : // ,(document.body.style["background-color"] = a.backgroundColor)
+        (l.setAttribute("height", B.height),
         (l.style[N] =
           "translate(" +
           -B.width / 2 +
@@ -137,8 +137,8 @@ export default function keyshotXRConstructor(
           ")"),
         (l.style["max-width"] = ""),
         (l.style.width = ""),
-        (l.style.height = ""),
-        (s.style["background-color"] = a.backgroundColor));
+        (l.style.height = ""));
+    // ,(s.style["background-color"] = a.backgroundColor)
   }
   function I() {
     a.Ua(a.h.offsetWidth, a.h.offsetHeight);
@@ -1035,7 +1035,7 @@ export default function keyshotXRConstructor(
     a.U(this.B);
     this.B.appendChild(this.O);
     n.appendChild(this.B);
-    this.backgroundColor = s.style.backgroundColor = wa;
+    // this.backgroundColor = s.style.backgroundColor = wa;
     Da &&
       ((a.S = document.createElement("div")),
       (b = "position:absolute;"),

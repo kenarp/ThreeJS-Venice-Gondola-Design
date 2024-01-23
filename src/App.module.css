@@ -28,7 +28,7 @@
   display: none;
 }
 .toggleContainer label {
-  z-index: 100;
+  z-index: 1;
   cursor: pointer;
 }
 .toggle {
@@ -40,7 +40,7 @@
   background-color: #fff;
   border-radius: 50vw;
   transition: all 0.7s;
-  z-index: 4;
+  z-index: 0;
   box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.2);
 }
 

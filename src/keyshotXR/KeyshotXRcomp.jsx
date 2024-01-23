@@ -23,10 +23,9 @@ function KeyshotXRcomp() {
     window.u = !1;
 
     window.initKeyShotXR = initKeyShotXR;
-    // window.initKeyShotXR(clientWidth * 0.9, clientHeight);
     const scale = clientWidth >= clientHeight ? 0.8 : 1;
-    window.initKeyShotXR(clientWidth * scale, clientHeight);
-    // window.initKeyShotXR();
+    window.initKeyShotXR(clientWidth * scale, (clientWidth * scale * 10) / 16);
+    // window.initKeyShotXR(1920, 1200);
 
     return () => {
       div.remove();
@@ -42,9 +41,9 @@ function KeyshotXRcomp() {
 
 export default KeyshotXRcomp;
 
-function initKeyShotXR(viewPortWidth = 3840, viewPortHeight = 2400) {
+function initKeyShotXR(viewPortWidth = 1920, viewPortHeight = 1200) {
   var nameOfDiv = "KeyShotXR";
-  var folderName = "/gondola.0";
+  var folderName = "gondola.0";
   // var viewPortWidth = 3840;
   // var viewPortHeight = 2400;
   var backgroundColor = "#FFFFFF";
@@ -64,7 +63,7 @@ function initKeyShotXR(viewPortWidth = 3840, viewPortHeight = 2400) {
   var downloadOnInteraction = false;
   var imageExtension = "png";
   var showLoading = true;
-  var loadingIcon = "/ks_logo.png"; // Set to empty string for default icon.
+  var loadingIcon = "ks_logo.png"; // Set to empty string for default icon.
   var allowFullscreen = true; // Double-click in desktop browsers for fullscreen.
   var uReverse = false;
   var vReverse = false;

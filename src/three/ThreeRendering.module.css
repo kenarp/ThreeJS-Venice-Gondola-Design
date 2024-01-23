@@ -11,8 +11,9 @@
 
 .threeContainer {
   position: relative;
-  margin-top: 2vh;
-  height: 100vh;
+  margin: 2vh auto;
+  height: auto;
+  width: auto;
 }
 
 .loader {
